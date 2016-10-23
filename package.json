@@ -1,6 +1,6 @@
 {
-  "name": "darn-yarn",
-  "version": "0.0.2",
+  "name": "learn-yarn",
+  "version": "1.0.0",
   "description": "NPM and Yarn differences",
   "main": "index.js",
   "scripts": {},
@@ -10,5 +10,11 @@
     "nodejs"
   ],
   "author": "Bodnar Istvan",
-  "license": "ISC"
+  "license": "MIT",
+  "devDependencies": {
+    "simple-grep": "git+ssh://git@github.com/gawkermedia/simple-grep.git#master"
+  },
+  "dependencies": {
+    "backbone": "1.3.2"
+  }
 }
