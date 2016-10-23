@@ -1,0 +1,14 @@
+{
+  "name": "darn-yarn",
+  "version": "0.0.2",
+  "description": "NPM and Yarn differences",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "yarn",
+    "npm",
+    "nodejs"
+  ],
+  "author": "Bodnar Istvan",
+  "license": "ISC"
+}
