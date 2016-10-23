@@ -1,6 +1,5 @@
 # What is yarn
-Yarn is **Y**et **A**nother **R**ackage **N**anager.
-https://yarnpkg.com/
+Yarn is **Y**et **A**nother **R**ackage **N**anager: https://yarnpkg.com/
 
 Claimed advantages over npm are speed, predictability, and offline capabilities.
 
@@ -24,7 +23,7 @@ Install a package globally:
 `npm install package -g` == `yarn global add package`
 
 # Cool things yarn can do
-## Show why a package was installed
+## Show why a dependency was installed
 `yarn why package`
 
 ```bash
@@ -43,7 +42,8 @@ info Amount of shared dependencies: 0
 ```
 
 ## Update the version of the developed package
-Shows `yarn` version, the version of the locally developed package from package.json, and asks for a new version number. Automatically updates package.json and commits the change.
+Shows the local package version from package.json, and asks for a new version number. Automatically updates package.json and commits the change.
+
 `yarn version`
 
 ```bash
@@ -67,6 +67,7 @@ Date:   Sun Oct 23 17:26:26 2016 +0200
 # Dependency versions
 Semver in npm:
 https://docs.npmjs.com/getting-started/semantic-versioning
+
 Checker tool:
 https://docs.npmjs.com/misc/semver
 
@@ -75,10 +76,10 @@ Most used version ranges:
  - `^` -- allows minor and patch updates (1.x.y)
  - `>=` -- use exact version or newer (x.y.z)
 
-Note: public packages has to start with 1.0.0!
+Note: public package versions has to start with 1.0.0!
 
 ## Useful commands when working with versions
-Set how versions are stored in package.json after `yarn add`
+Set how version ranges are stored in package.json after `yarn add`
 ```bash
 npm config set save-prefix='~'
 # or
@@ -93,7 +94,7 @@ yarn add backbone@1.3.2
 ```
 
 ## Outdated packages
-Check outdated package:
+Check outdated dependencies, show their source and the latest available version number:
 ```bash
 npm outdated
 # or
@@ -102,7 +103,8 @@ yarn outdated
 
 Use `npm-update-outdated` to update everything:
 https://www.npmjs.com/package/npm-update-outdated
-As a service:
+
+Update-npm-packages as a service:
 https://greenkeeper.io/
 
 ## Dependency types
@@ -113,6 +115,7 @@ npm install karma --save-dev
 # or
 yarn add karma --dev
 ```
+
 ### peerDependencies
 These won't be installed as dependencies, but rather mark the version of peers that will surely work with the local package.
 https://docs.npmjs.com/files/package.json#peerdependencies
